@@ -15,7 +15,12 @@ To run the project, install the following tools.
 ```
 ## To execute
 ```
-To execute
+To execute you will need...
+express
+handlebars
+mysql
+mysql2
+nodemon
 use the npm start command
 ```
 

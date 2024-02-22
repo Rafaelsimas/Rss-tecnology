@@ -1,0 +1,19 @@
+<main>
+    <a class="btn-back-home poppins-light" href="/">Voltar a home</a>
+  <div class="box-contracts">
+    {{#each contracts}}
+    <div class="contract">
+      <div class="name poppins-bold">{{this.name}}</div>
+      <div class="data-contract poppins-light">Início do contrato:
+        <strong>{{this.contractstart}}</strong></div>
+      <div class="description poppins-light">{{this.descriptionservice}}</div>
+      <div class="actions">
+        <form action="/contracts/delete/{{this.id}}" method="post">
+        <a href="/contracts/edit/{{this.id}}">Editar</a>
+        <input type="submit" value="Excluir">
+        </form>
+      </div>
+    </div>
+     {{/each}}
+  </div>
+</main>

@@ -1,0 +1,21 @@
+<div class="divisor"></div>
+<main>
+    <form class="form-add-new-contract" action="/contracts/update" method="POST">
+    <input type="hidden" name="id" value="{{contract.id}}">
+        <div class="title-form poppins-bold">Novo Contrato</div>
+
+        <div class="area-input">
+            <input type="text" name="name" placeholder="Nome da empresa" value="{{contract.name}}">
+        </div>
+        <div class="area-input">
+            <input type="text" name="contractstart" placeholder="Início do contrato" value="{{contract.contractstart}}">
+        </div>
+        <div class="area-input">
+            <input type="text" name="descriptionservice" placeholder="Descrição do serviço" value="{{contract.descriptionservice}}">
+        </div>
+        <div class="flex-btn-form ">
+            <input class="btn-add" type="submit" value="Editar">
+        </div>
+         <a class="btn-back-home poppins-light" href="/">Voltar a home</a>
+    </form>
+</main>

@@ -1,0 +1,419 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --body-color: blueviolet;
+    --btn-add-color: #9b42ee;
+    --btn-view-color: #90ee90;
+    --all-text-color: #ededed;
+    --xl-text-color:#ffffff;
+    --line-botton-color: #b6b6b6b7;
+}
+
+body{
+    background-color: var(--body-color);
+}
+
+/* -----------menu mobile hidden----- */
+.menu-mobile{
+    display: none;
+}
+
+/* ----------menu---------- */
+
+.top{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.top .box-top{
+    width: 78%;
+    border-bottom: 1px solid var(--line-botton-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -----------title-class---------- */
+.top .box-top .title-header{
+    color: var(--all-text-color);
+    font-size: 1.4rem;
+}
+
+.title-header span{
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.top .box-top ul{
+    display: flex;
+}
+
+.top .box-top ul li{
+    margin-left: 1.5rem;
+}
+
+.top .box-top ul li a{
+    color: var(--all-text-color);
+}
+
+
+
+.welcome{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* ----------main---------- */
+main{
+    margin-top: 90px;
+    width: 78%;
+    margin-inline: auto;
+}
+
+main .box-home{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -------box do texto home------- */
+main .box-home .text-left{
+   width: 50%;
+}
+main .box-home .image-right{
+   width: 50%;
+}
+
+main .box-home .text-left .welcome{
+    color: var(--all-text-color);
+}
+
+main .box-home .text-left .home-text-xl {
+    color: var(--xl-text-color);
+    font-size: 4.9rem;
+}
+
+main .box-home .text-left .home-text-md{
+    color: var(--all-text-color);
+    font-size: 1.4rem;
+}
+
+main .box-home .text-left .btn-action-home{
+    width: 80%;
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+main .box-home .text-left .btn-action-home .btn-home{
+    margin-top: 30px;
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+main .box-home .text-left .btn-action-home .visualizar{
+    background: var(--btn-view-color);
+    color: rgb(63, 63, 63);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+main .box-home .text-left .btn-action-home .adicionar{
+    background: var(--btn-add-color);
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* ---------------box image home---------- */
+
+main .box-home .image-right img{
+    width: 35rem;
+}
+
+/* ========================================
+============Todos os contratos======== */
+
+.box-contracts{
+    margin-top: -1rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+  
+    overflow: scroll;
+    padding: 0.5rem;
+}
+
+.box-contracts .btn-back-home{
+    color: var(--all-text-color);
+}
+.contract{
+    background: white;
+    width: 29%;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.contract .name{
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+.contract .data-contract{
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+.contract .description{
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+}
+
+/* Works on Firefox */
+.box-contracts {
+    scrollbar-width: none;
+    scrollbar-color: none;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  .box-contracts::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  .box-contracts::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  .box-contracts::-webkit-scrollbar-thumb {
+    background-color: none;
+    border-radius: 20px;
+    border: 3px solid none;
+  }
+
+
+  /* =============formulário de cadastro========== */
+  .divisor{
+    background-color: white;
+    width: 100%;
+    height: 300px;
+  }
+
+  .form-add-new-contract {
+    background: var(--all-text-color);
+    width: 100%;
+    max-width: 780px;
+    margin-inline: auto;
+    margin-top: -19.9rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.form-add-new-contract .title-form{
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.form-add-new-contract .area-input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-add-new-contract .area-input input{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 1rem;
+}
+
+.form-add-new-contract .flex-btn-form{
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 50%;
+}
+.form-add-new-contract .flex-btn-form .btn-add{
+    width: 50%;
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+.form-add-new-contract .flex-btn-form .btn-cancel{
+    width: 50%;
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+@media (max-width:950px) {
+    /* -----------menu mobile hidden----- */
+.menu-mobile{
+    display: block;
+}
+
+.menu-mobile ion-icon{
+    color: white;
+    font-size: 1.8rem;
+}
+
+    .menu-desktop{
+        display: none;
+    }
+    main .box-home{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* -------box do texto home------- */
+main .box-home .text-left{
+    width: 100%;
+    text-align: center;
+ }
+ main .box-home .image-right{
+    width: 100%;
+ }
+
+ main .box-home .text-left .welcome{
+    color: var(--all-text-color);
+}
+
+main .box-home .text-left .home-text-xl{
+    color: var(--xl-text-color);
+    font-size: 2.9rem;
+}
+
+main .box-home .text-left .home-text-md{
+    color: var(--all-text-color);
+    font-size: 1.4rem;
+}
+
+main .box-home .text-left .btn-action-home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 5px;
+}
+
+main .box-home .text-left .btn-action-home .btn-home{
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+main .box-home .text-left .btn-action-home .visualizar{
+    background: var(--btn-view-color);
+    color: rgb(63, 63, 63);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+main .box-home .text-left .btn-action-home .adicionar{
+    background: var(--btn-add-color);
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* ---------------box image home---------- */
+main .box-home .image-right{
+    text-align: center;
+}
+
+main .box-home .image-right img{
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* ========================================
+============Todos os contratos======== */
+.box-contracts{
+    margin-top: -1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    height: 550px;
+    overflow: scroll;
+    padding: 0.5rem;
+}
+.contract{
+    background: white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* Works on Firefox */
+.box-contracts {
+    scrollbar-width: none;
+    scrollbar-color: none;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  .box-contracts::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  .box-contracts::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  .box-contracts::-webkit-scrollbar-thumb {
+    background-color: none;
+    border-radius: 20px;
+    border: 3px solid none;
+  }
+
+  /* ==========formulário de cadastro================= */
+  .form-add-new-contract {
+    background: var(--all-text-color);
+    width: 100%;
+    margin-inline: auto;
+    margin-top: -21.9rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+  .form-add-new-contract .flex-btn-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+.form-add-new-contract .flex-btn-form .btn-add{
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+.form-add-new-contract .flex-btn-form .btn-cancel{
+    width: 100%;
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+}
+

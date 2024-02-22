@@ -5,8 +5,6 @@ const Contract = require('./models/Contract')
 const app = express()
 const port = 3333
 
-
-/* ----------------config template engine---------------- */
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 app.use(express.static('images'));
@@ -14,10 +12,7 @@ app.use(express.static('public'))
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
-/* ------------------------------------------------------ */
 
-
-/*===========cadastro de dados================== */
 app.get('/contract/create', (req, res) => {
     res.render('addcontract')
 })
@@ -30,9 +25,7 @@ app.post('/contract/create', async (req, res) => {
     await Contract.create({name, contractstart, descriptionservice})
     res.redirect('/contracts')
 })
-/*=============================================== */
 
-/*=========== Listando dados em tela================== */
 app.get('/contracts', async (req, res) => {
     const contracts = await Contract.findAll({raw: true})
 
@@ -69,12 +62,10 @@ app.post('/contracts/update', async (req, res) => {
 })
 
 
-/*=============================Home================== */
 app.get('/', (req, res) => {
     res.render('home')
 })
 
-/*=============================conexão com banco================== */
 conn.sync()
 .then(() => {
 
